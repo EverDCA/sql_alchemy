@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Clientes</title>
+</head>
+<body>
+    <h1>Gestión de Clientes</h1>
+
+    <!-- Formulario para agregar un cliente -->
+    <h2>Agregar Cliente</h2>
+    <form action="/clientes" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <input type="submit" value="Agregar Cliente">
+    </form>
+
+    <hr>
+
+    <!-- Formulario para actualizar un cliente -->
+    <h2>Actualizar Cliente</h2>
+    <form action="/clientes/actualizar" method="post">
+        <label for="id">ID del Cliente:</label>
+        <input type="number" name="id" required><br><br>
+
+        <label for="nombre">Nuevo Nombre:</label>
+        <input type="text" name="nombre" required><br><br>
+
+        <label for="email">Nuevo Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <input type="submit" value="Actualizar Cliente">
+    </form>
+
+    <hr>
+
+    <!-- Formulario para eliminar un cliente -->
+    <h2>Eliminar Cliente</h2>
+    <form action="/clientes/eliminar" method="post">
+        <label for="id">ID del Cliente:</label>
+        <input type="number" name="id" required><br><br>
+
+        <input type="submit" value="Eliminar Cliente">
+    </form>
+
+    <hr>
+
+    <!-- Enlace para ver la lista de clientes -->
+    <h2>Ver Clientes</h2>
+    <form action="/clientes/ver" method="get">
+        <input type="submit" value="Mostrar Clientes">
+    </form>
+</body>
+</html>
