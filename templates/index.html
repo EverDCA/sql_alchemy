@@ -3,18 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <title>Gestión de Clientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <h1>Gestión de Clientes</h1>
 
     <!-- Formulario para agregar un cliente -->
-    <h2>Agregar Cliente</h2>
+    <h2>➕ Agregar Cliente</h2>
     <form action="/clientes" method="post">
         <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" required><br><br>
+        <input type="text" name="nombre" required>
 
         <label for="email">Email:</label>
-        <input type="email" name="email" required><br><br>
+        <input type="email" name="email" required>
 
         <input type="submit" value="Agregar Cliente">
     </form>
@@ -22,16 +97,16 @@
     <hr>
 
     <!-- Formulario para actualizar un cliente -->
-    <h2>Actualizar Cliente</h2>
+    <h2>✏️ Actualizar Cliente</h2>
     <form action="/clientes/actualizar" method="post">
         <label for="id">ID del Cliente:</label>
-        <input type="number" name="id" required><br><br>
+        <input type="number" name="id" required>
 
         <label for="nombre">Nuevo Nombre:</label>
-        <input type="text" name="nombre" required><br><br>
+        <input type="text" name="nombre" required>
 
         <label for="email">Nuevo Email:</label>
-        <input type="email" name="email" required><br><br>
+        <input type="email" name="email" required>
 
         <input type="submit" value="Actualizar Cliente">
     </form>
@@ -39,10 +114,10 @@
     <hr>
 
     <!-- Formulario para eliminar un cliente -->
-    <h2>Eliminar Cliente</h2>
+    <h2>🗑️ Eliminar Cliente</h2>
     <form action="/clientes/eliminar" method="post">
         <label for="id">ID del Cliente:</label>
-        <input type="number" name="id" required><br><br>
+        <input type="number" name="id" required>
 
         <input type="submit" value="Eliminar Cliente">
     </form>
@@ -50,9 +125,13 @@
     <hr>
 
     <!-- Enlace para ver la lista de clientes -->
-    <h2>Ver Clientes</h2>
+    <h2>👀 Ver Clientes</h2>
     <form action="/clientes/ver" method="get">
         <input type="submit" value="Mostrar Clientes">
     </form>
+
+    <div class="footer">
+        &copy; 2025 - App de Gestión de Clientes
+    </div>
 </body>
 </html>
